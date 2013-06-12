@@ -1,0 +1,94 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #000000;
+}
+
+#paralax {
+	position: relative;
+	height: 400px;
+	top: 50%;
+	margin-top: -200px;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+
+#logoOne,
+#logoTwo,
+#layerOne,
+#layerTwo,
+#layerThree,
+#layerFour,
+#layerFive {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 400px;
+	width: 100%;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: linear;
+	-webkit-play-state: running;
+	-webkit-animation-iteration-count: infinite;
+}
+
+#logoOne {
+	background: url(img/logo01.png) no-repeat center;
+	z-index: 6;
+}
+
+#logoTwo {
+	background: url(img/logo02.png) no-repeat center;
+	z-index: 5;
+}
+
+#layerOne {
+	background: bottom url(img/layer01.png);
+	z-index: 4;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: scrollingRight;
+}
+
+#layerTwo {
+	background: center url(img/layer02.png);
+	z-index: 3;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: scrollingLeft;
+}
+
+#layerThree {
+	background: url(img/layer03.png) left;
+	z-index: 2;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: scrollingLeft;
+}
+
+#layerFour {
+	background: url(img/layer04.png) left;
+	z-index: 1;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-name: scrollingLeft;
+}
+
+#layerFive {
+	background: url(img/layer05.png) left;
+	z-index: 0;
+	-webkit-animation-name: scrollingLeft;
+}
+
+@-webkit-keyframes scrollingLeft {
+	0% {
+		background-position: 0px;
+	}
+	100% {
+		background-position: -1000px;
+	}
+}
+
+@-webkit-keyframes scrollingRight {
+	0% {
+		background-position: 0px;
+	}
+	100% {
+		background-position: 1000px;
+	}
+}
